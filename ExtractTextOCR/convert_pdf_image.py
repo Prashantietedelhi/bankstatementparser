@@ -2,9 +2,7 @@ from pdf2image import convert_from_path
 import os
 from PIL import Image
 import pytesseract
-import spacy
 
-nlp = spacy.load("bankstatement")
 
 filename = 'Birddogs-BofA-Bank-Statement-April.pdf'
 newfilename = filename.replace(".pdf",'')
@@ -34,16 +32,6 @@ for file in files:
     text = text.split("\n")
     text = [i for i in  text if i!='']
     for t in text:
-        # print("==========",t)
-        doc = nlp(t)
-        for ent in doc.ents:
-            print(ent.text, ent.start_char, ent.end_char, ent.label_)
-    # print(text)
+        print("==========",t)
 
-
-### Rules to extract the Content from the text
-# Banks = ['Bank of America']
-# Locations = ["Wilmington"]
-# AccountNum = ["Account number"]
-# tableRegex = ''
 

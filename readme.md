@@ -1,6 +1,10 @@
 
-pdf_table_data_extractor.py
+TableExtraction
         
               extract tablular data
+              
+ExtractTextOCR
+
+               extract text using ocr
               
    
